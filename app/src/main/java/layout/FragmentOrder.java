@@ -1,5 +1,6 @@
 package layout;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -7,6 +8,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
@@ -66,6 +68,14 @@ public class FragmentOrder extends Fragment {
                 setFilter(keyword);
             }
         });
+        search.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
         img_btn = (ImageButton) v.findViewById(R.id.cancel_search);
         img_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,19 +103,26 @@ public class FragmentOrder extends Fragment {
             search_bar.setVisibility(View.GONE);
 
     }
-    
+
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager =(InputMethodManager)mainActivity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
+
     public void setFilter(String keyword){
         mSavedTabsListAdapter.setFilter(keyword);
     }
 
     public class SavedTabsListAdapter extends BaseExpandableListAdapter {
-        private String[] orgGroups = { "Polévky", "Překdrmy", "Bezmasá jídla", "Drůbež", "Steaky", "Přílohy", "Saláty", "Alkoholické nápoje", "Nealkoholické nápoje", "Teplé nápoje"};
+        private String[] orgGroups = { "Oblíbené", "Polévky", "Překdrmy", "Bezmasá jídla", "Drůbež", "Steaky", "Přílohy", "Saláty", "Alkoholické nápoje", "Nealkoholické nápoje", "Teplé nápoje"};
         private ArrayList<Item[]> orgChildrenList;
         private String[] groups = orgGroups.clone();
         private ArrayList<Item[]> children;
 
         public void init(){
             orgChildrenList = new ArrayList<Item[]>();
+            orgChildrenList.add(new Item[]{ new Item("Pivo","0.5 l",1.9), new Item("Latte","0.2 l",2.9), new Item("Víno červené","2 dcl",1.9), new Item("Hovězí steak","200 g", 7.9), new Item("Česnečka","3 dcl",0.9) });
             orgChildrenList.add(new Item[]{ new Item("Boršť","3 dcl",0.9), new Item("Zelňačka","3 dcl",0.9), new Item("Kuřecí vývar","3 dcl",0.9), new Item("Kulajda","3 dcl",0.9), new Item("Česnečka","3 dcl",0.9) });
             orgChildrenList.add(new Item[]{ new Item("Kaviár","50 g",19.9), new Item("Křenové rolky","3 ks",4.9) });
             orgChildrenList.add(new Item[]{ new Item("Smažený sýr","200 g",1.9), new Item("Nakládaný Hermelín","80 g", 3.9) });
