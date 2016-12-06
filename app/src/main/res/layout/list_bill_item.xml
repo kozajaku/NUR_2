@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="32dip"
+        android:layout_height="32dip"
+        android:id="@+id/billItem_statePic"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:textSize="17dip"
+        android:layout_marginLeft="10dip"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:id="@+id/billItem_name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="totalPrice"
+        android:textSize="17dip"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:id="@+id/billItem_totalPrice"/>
+    <ImageButton
+        android:layout_width="32dip"
+        android:layout_height="32dip"
+        android:layout_marginLeft="10dip"
+        android:background="@android:drawable/ic_menu_more"
+        android:id="@+id/billItem_more"/>
+
+</LinearLayout>

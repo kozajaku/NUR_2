@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.nur.griesmic.grizllym_asus.nur_2.MainActivity">
+    <!-->
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="1"
+        android:title="Search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:showAsAction="ifRoom"
+        />
+    <-->
+    <item
+        android:id="@+id/action_us"
+        android:orderInCategory="100"
+        android:title="About Us"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_app"
+        android:orderInCategory="100"
+        android:title="About Application"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_faq"
+        android:orderInCategory="100"
+        android:title="F.A.Q."
+        app:showAsAction="never" />
+</menu>
