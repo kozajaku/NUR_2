@@ -20,7 +20,7 @@ public class ItemInBill {
 
     public String getTotalPrice()
     {
-        return String.valueOf(n) + "x : " + n*item.price + item.currency;
+        return String.valueOf(n) + "x : " + String.format("%.2f",n*item.price) + item.currency;
     }
 
     public void setState(boolean b) {
