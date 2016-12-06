@@ -9,16 +9,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".GuestBookActivity"
-            android:label="@string/title_activity_guest_book"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".TitleActivity"
-            android:label="@string/title_activity_title"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +20,14 @@
         </activity>
         <activity android:name=".ScanActivity"
             android:label="@string/scan_activity_title"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/main_activity_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GuestBookActivity"
+            android:label="@string/title_activity_guest_book"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
