@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(mViewPager);
         bill = new Bill();
 
-        onScanTableClicked();
+        //onScanTableClicked();//pekna prasarna toto
     }
 
 
@@ -158,8 +157,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onScanTableClicked(){
-        Intent intent = new Intent(this, TitleActivity.class);
+        //Intent intent = new Intent(this, TitleActivity.class);
+        //startActivity(intent);
+        Intent intent = new Intent(this, ScanActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public void setNew(boolean aNew) {
@@ -189,12 +191,13 @@ public class MainActivity extends AppCompatActivity {
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("Method of Paying:");
+        final Context actCtx = context;
         builder.setItems(new String[]{"Cash", "Card"}, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which){
                     default:
-                        Toast.makeText(context, "Service will arrive shortly.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(actCtx, "Service will arrive shortly.", Toast.LENGTH_LONG).show();
                         break;
                 }
             }

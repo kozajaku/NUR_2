@@ -22,14 +22,16 @@ public class ScanActivity extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ctx, TitleActivity.class);
-                startActivity(intent);
-                //finish();
+                //Intent intent = new Intent(ctx, TitleActivity.class);
+                //startActivity(intent);
+                finish();
             }
         });
         imgBtn_scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(ctx, MainActivity.class);
+                startActivity(intent);
                 finish();
             }
         });

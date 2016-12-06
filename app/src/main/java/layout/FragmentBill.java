@@ -107,8 +107,10 @@ public class FragmentBill extends Fragment {
             ((TextView)v.findViewById(R.id.billItem_totalPrice)).setText(item.getTotalPrice());
 
             ImageButton btnMore = (ImageButton) v.findViewById(R.id.billItem_more);
-            if(item.state)
+            if(item.state) {
+                btnMore.setVisibility(View.INVISIBLE);
                 btnMore.setEnabled(false);
+            }
             else {
                 btnMore.setEnabled(true);
 

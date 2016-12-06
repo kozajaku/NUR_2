@@ -21,6 +21,8 @@ public class TitleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_title);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         this.context = this;
         btn_scan = (Button) findViewById(R.id.activity2_scan);
         btn_scan.setOnClickListener(new View.OnClickListener() {
@@ -28,10 +30,9 @@ public class TitleActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(context, ScanActivity.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
         });
-        setSupportActionBar(toolbar);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
