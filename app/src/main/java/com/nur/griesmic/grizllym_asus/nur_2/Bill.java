@@ -1,14 +1,7 @@
 package com.nur.griesmic.grizllym_asus.nur_2;
 
-import android.widget.Toast;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collections;
 
-/**
- * Created by GrizllyM on 26.10.2016.
- */
 public class Bill {
     public ArrayList<ItemInBill> list;
     public static String currency = "€";

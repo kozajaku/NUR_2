@@ -1,8 +1,5 @@
 package com.nur.griesmic.grizllym_asus.nur_2;
 
-/**
- * Created by GrizllyM on 26.10.2016.
- */
 public class ItemInBill {
     public Item item;
     public int n;

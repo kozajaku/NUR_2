@@ -1,8 +1,5 @@
 package com.nur.griesmic.grizllym_asus.nur_2;
 
-/**
- * Created by GrizllyM on 26.10.2016.
- */
 public class Item {
     public String name;
     public String note;

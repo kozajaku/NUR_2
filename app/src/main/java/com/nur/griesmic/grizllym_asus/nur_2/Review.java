@@ -1,12 +1,7 @@
 package com.nur.griesmic.grizllym_asus.nur_2;
 
-import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-/**
- * Created by GrizllyM-ASUS on 07.11.2016.
- */
 
 public class Review {
     private int id;

@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -101,19 +100,6 @@ public class FragmentOrder extends Fragment {
 
     public class SavedTabsListAdapter extends BaseExpandableListAdapter {
         private String[] orgGroups = { "Polévky", "Překdrmy", "Bezmasá jídla", "Drůbež", "Steaky", "Přílohy", "Saláty", "Alkoholické nápoje", "Nealkoholické nápoje", "Teplé nápoje"};
-        /*private Item[][] orgChildren = {
-                { new Item("Boršť","3 dcl",0.9), new Item("Zelňačka","3 dcl",0.9), new Item("Kuřecí vývar","3 dcl",0.9), new Item("Kulajda","3 dcl",0.9), new Item("Česnečka","3 dcl",0.9) },
-                { new Item("Kaviár","50 g",19.9), new Item("Křenové rolky","3 ks",4.9) },
-                { new Item("Smažený sýr","200 g",1.9), new Item("Nakládaný Hermelín","80 g", 3.9) },
-                { new Item("Kuřecí kapsa","250 g", 7.9), new Item("Kuřecí nudličky","150 g", 4.9) },
-                { new Item("Hovězí steak","200 g", 7.9), new Item("Panenka","200 g", 7.9) },
-                { new Item("Hranolky","100 g",1.9), new Item("Krokety","100 g",1.9), new Item("Brambory","100 g", 1.9), new Item("Rýže","100 g", 1.9) },
-                { new Item("Salát Ceasar","150 g",3.9), new Item("Kuřecí Salát","150 g", 3.9), new Item("Těstovinový","200 g", 4.9) },
-                { new Item("Pivo","0.5 l",1.9), new Item("Víno červené","2 dcl",1.9), new Item("Víno bílé","2 dcl",1.9), new Item("Captain Morgen","2 cl", 2.9) },
-                { new Item("Voda perlivá","0.33 l", 1.9), new Item("Voda neperlivá","0.33 l", 1.9), new Item("Džus Jablko","0.33 l", 1.9), new Item("Džus Pomeranč","0.33 l", 1.9), new Item("Džus Ananas","0.33 l", 1.9), new Item("Džus Multivitamín","0.33 l", 1.9) },
-                { new Item("Latte","0.2 l", 2.9), new Item("Machiato","0.2 l", 2.9), new Item("Americano","0.2 l", 2.9), new Item("Espresso","0.2 l", 2.9), new Item("Capucchino","0.2 l", 2.9), new Item("Kakao","0.2 l", 2.9), new Item("Čaj černý","0.2 l", 2.9), new Item("Čaj zelený","0.2 l", 2.9), new Item("Čaj ovocný","0.2 l", 2.9)}
-        };*/
-        
         private ArrayList<Item[]> orgChildrenList;
         private String[] groups = orgGroups.clone();
         private ArrayList<Item[]> children;
